@@ -18,6 +18,8 @@
 		4F816EA8263BEB89009EE2EE /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F816EA7263BEB89009EE2EE /* UILabel+Extension.swift */; };
 		4F816EAA263C09D3009EE2EE /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F816EA9263C09D3009EE2EE /* UIImageView+Extension.swift */; };
 		4F816EAE263C214D009EE2EE /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F816EAD263C214D009EE2EE /* ButtonFormView.swift */; };
+		4F8384EA263D379100891FCD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8384E9263D379100891FCD /* SignUpViewController.swift */; };
+		4F8384EC263D3D0400891FCD /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8384EB263D3D0400891FCD /* OneLineTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		4F816EA7263BEB89009EE2EE /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		4F816EA9263C09D3009EE2EE /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		4F816EAD263C214D009EE2EE /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
+		4F8384E9263D379100891FCD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4F8384EB263D3D0400891FCD /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 				4F0150122635F15500738E77 /* AppDelegate.swift */,
 				4F0150142635F15500738E77 /* SceneDelegate.swift */,
 				4F0150162635F15500738E77 /* AuthViewController.swift */,
+				4F8384E9263D379100891FCD /* SignUpViewController.swift */,
 				4F816EAC263C0E48009EE2EE /* Extensions */,
 				4F01501B2635F15700738E77 /* Assets.xcassets */,
 				4F01501D2635F15700738E77 /* LaunchScreen.storyboard */,
@@ -93,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				4F816EAD263C214D009EE2EE /* ButtonFormView.swift */,
+				4F8384EB263D3D0400891FCD /* OneLineTextField.swift */,
 				4F816EAB263C0E2D009EE2EE /* UIKit */,
 			);
 			path = Extensions;
@@ -171,7 +177,9 @@
 				4F59FDCB263B217300E0A076 /* UIButton+Extension.swift in Sources */,
 				4F816EAA263C09D3009EE2EE /* UIImageView+Extension.swift in Sources */,
 				4F816EAE263C214D009EE2EE /* ButtonFormView.swift in Sources */,
+				4F8384EA263D379100891FCD /* SignUpViewController.swift in Sources */,
 				4F0150132635F15500738E77 /* AppDelegate.swift in Sources */,
+				4F8384EC263D3D0400891FCD /* OneLineTextField.swift in Sources */,
 				4F816EA8263BEB89009EE2EE /* UILabel+Extension.swift in Sources */,
 				4F816EA6263BE149009EE2EE /* UIColor+Extension.swift in Sources */,
 				4F59FDCF263B26B500E0A076 /* UIFont+Extension.swift in Sources */,

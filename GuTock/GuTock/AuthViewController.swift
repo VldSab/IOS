@@ -27,9 +27,14 @@ class AuthViewController: UIViewController {
         view.backgroundColor = .white
         setupConstraints()
     }
+}
+
+//MARK: - Setup Constraints
+extension AuthViewController {
     
     private func setupConstraints(){
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
+        
         //initializing buttonforms (button+label)
         let googleView = ButtonFormView(label: googleLabel, button: googleButton)
         let emailView = ButtonFormView(label: emailLabel, button: emailButton)
@@ -53,12 +58,10 @@ class AuthViewController: UIViewController {
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
-        
     }
-    
 }
 
-//MARK:- SwiftUI
+//MARK: - SwiftUI
 import SwiftUI
 //for working with canvas
 struct AuthVCProvider: PreviewProvider {
