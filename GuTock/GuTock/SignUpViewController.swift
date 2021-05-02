@@ -11,6 +11,7 @@ class SignUpViewController: UIViewController {
     
     let welcomeLabel = UILabel(text: "Good to see you!", font: .avenir26())
     
+    //labeles
     let emailLabel = UILabel(text: "Email")
     let passwordLabel = UILabel(text: "Password")
     let confirmPasswordLabel = UILabel(text: "Confirm password")
@@ -21,15 +22,18 @@ class SignUpViewController: UIViewController {
     let passwordTextField = OneLineTextField(font: .avenir20())
     let confirmPasswordTextField = OneLineTextField(font: .avenir20())
     
-    
+    //buttons
     let signUpButton = UIButton(title: "Sign Up", titleColor: .white, backgroundColor: .buttonDark(), isShadow: false)
-    let loginButton = UIButton()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    let loginButton: UIButton = {
+        let loginButton = UIButton(type: .system)
         loginButton.setTitle("Login", for: .normal)
         loginButton.setTitleColor(.buttonRed(), for: .normal)
         loginButton.titleLabel?.font = .avenir20()
+        return loginButton
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         view.backgroundColor = .white
         setupConstraints()
     }
@@ -58,7 +62,10 @@ extension SignUpViewController {
         signUpButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
         //make general stackView for fields
-        let stackView = UIStackView(arrangedSubviews: [emailStackView, passwordStackView, confirmPasswordStackView, signUpButton])
+        let stackView = UIStackView(arrangedSubviews: [emailStackView,
+                                                       passwordStackView,
+                                                       confirmPasswordStackView,
+                                                       signUpButton])
         stackView.axis = .vertical
         stackView.spacing = 40
         

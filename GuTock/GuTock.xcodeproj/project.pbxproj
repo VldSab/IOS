@@ -20,6 +20,7 @@
 		4F816EAE263C214D009EE2EE /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F816EAD263C214D009EE2EE /* ButtonFormView.swift */; };
 		4F8384EA263D379100891FCD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8384E9263D379100891FCD /* SignUpViewController.swift */; };
 		4F8384EC263D3D0400891FCD /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8384EB263D3D0400891FCD /* OneLineTextField.swift */; };
+		4FDFA46A263EEC8E00B7B627 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDFA469263EEC8E00B7B627 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		4F816EAD263C214D009EE2EE /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
 		4F8384E9263D379100891FCD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4F8384EB263D3D0400891FCD /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
+		4FDFA469263EEC8E00B7B627 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				4F0150142635F15500738E77 /* SceneDelegate.swift */,
 				4F0150162635F15500738E77 /* AuthViewController.swift */,
 				4F8384E9263D379100891FCD /* SignUpViewController.swift */,
+				4FDFA469263EEC8E00B7B627 /* LoginViewController.swift */,
 				4F816EAC263C0E48009EE2EE /* Extensions */,
 				4F01501B2635F15700738E77 /* Assets.xcassets */,
 				4F01501D2635F15700738E77 /* LaunchScreen.storyboard */,
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FDFA46A263EEC8E00B7B627 /* LoginViewController.swift in Sources */,
 				4F0150172635F15500738E77 /* AuthViewController.swift in Sources */,
 				4F59FDCB263B217300E0A076 /* UIButton+Extension.swift in Sources */,
 				4F816EAA263C09D3009EE2EE /* UIImageView+Extension.swift in Sources */,
