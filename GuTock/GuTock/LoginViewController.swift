@@ -46,6 +46,7 @@ extension LoginViewController {
     private func SetupConstraints() {
         
         //making compositions
+        googleButton.customizeGoogleButton()
         let loginWithStack = ButtonFormView(label: loginWithLabel, button: googleButton)
        
         let emailStackView = UIStackView(arrangedSubviews: [emailLabel, emailTextField])

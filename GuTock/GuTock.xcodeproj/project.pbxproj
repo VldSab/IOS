@@ -20,6 +20,9 @@
 		4F816EAE263C214D009EE2EE /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F816EAD263C214D009EE2EE /* ButtonFormView.swift */; };
 		4F8384EA263D379100891FCD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8384E9263D379100891FCD /* SignUpViewController.swift */; };
 		4F8384EC263D3D0400891FCD /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8384EB263D3D0400891FCD /* OneLineTextField.swift */; };
+		4F86173E263FE3140032E16A /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86173D263FE3140032E16A /* SetupProfileViewController.swift */; };
+		4F861740263FE8520032E16A /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86173F263FE8520032E16A /* AddPhotoView.swift */; };
+		4F86174226404EEB0032E16A /* SegmentedControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86174126404EEB0032E16A /* SegmentedControl+Extensions.swift */; };
 		4FDFA46A263EEC8E00B7B627 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDFA469263EEC8E00B7B627 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,9 @@
 		4F816EAD263C214D009EE2EE /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
 		4F8384E9263D379100891FCD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4F8384EB263D3D0400891FCD /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
+		4F86173D263FE3140032E16A /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
+		4F86173F263FE8520032E16A /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
+		4F86174126404EEB0032E16A /* SegmentedControl+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControl+Extensions.swift"; sourceTree = "<group>"; };
 		4FDFA469263EEC8E00B7B627 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +83,7 @@
 				4F0150162635F15500738E77 /* AuthViewController.swift */,
 				4F8384E9263D379100891FCD /* SignUpViewController.swift */,
 				4FDFA469263EEC8E00B7B627 /* LoginViewController.swift */,
+				4F86173D263FE3140032E16A /* SetupProfileViewController.swift */,
 				4F816EAC263C0E48009EE2EE /* Extensions */,
 				4F01501B2635F15700738E77 /* Assets.xcassets */,
 				4F01501D2635F15700738E77 /* LaunchScreen.storyboard */,
@@ -88,6 +95,7 @@
 		4F816EAB263C0E2D009EE2EE /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				4F86174126404EEB0032E16A /* SegmentedControl+Extensions.swift */,
 				4F816EA9263C09D3009EE2EE /* UIImageView+Extension.swift */,
 				4F816EA5263BE149009EE2EE /* UIColor+Extension.swift */,
 				4F59FDCA263B217300E0A076 /* UIButton+Extension.swift */,
@@ -100,6 +108,7 @@
 		4F816EAC263C0E48009EE2EE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4F86173F263FE8520032E16A /* AddPhotoView.swift */,
 				4F816EAD263C214D009EE2EE /* ButtonFormView.swift */,
 				4F8384EB263D3D0400891FCD /* OneLineTextField.swift */,
 				4F816EAB263C0E2D009EE2EE /* UIKit */,
@@ -184,6 +193,9 @@
 				4F8384EA263D379100891FCD /* SignUpViewController.swift in Sources */,
 				4F0150132635F15500738E77 /* AppDelegate.swift in Sources */,
 				4F8384EC263D3D0400891FCD /* OneLineTextField.swift in Sources */,
+				4F86174226404EEB0032E16A /* SegmentedControl+Extensions.swift in Sources */,
+				4F86173E263FE3140032E16A /* SetupProfileViewController.swift in Sources */,
+				4F861740263FE8520032E16A /* AddPhotoView.swift in Sources */,
 				4F816EA8263BEB89009EE2EE /* UILabel+Extension.swift in Sources */,
 				4F816EA6263BE149009EE2EE /* UIColor+Extension.swift in Sources */,
 				4F59FDCF263B26B500E0A076 /* UIFont+Extension.swift in Sources */,

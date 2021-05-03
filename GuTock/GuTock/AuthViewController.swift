@@ -21,11 +21,12 @@ class AuthViewController: UIViewController {
     
     //app logo
     let logoImageView = UIImageView(image: #imageLiteral(resourceName: "logo1.0"), contentMode: .scaleAspectFit)
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupConstraints()
+        
     }
 }
 
@@ -36,6 +37,7 @@ extension AuthViewController {
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         
         //initializing buttonforms (button+label)
+        googleButton.customizeGoogleButton()
         let googleView = ButtonFormView(label: googleLabel, button: googleButton)
         let emailView = ButtonFormView(label: emailLabel, button: emailButton)
         let alreadyOnboardView = ButtonFormView(label: alreadyOnboardLabel, button: loginButton)
