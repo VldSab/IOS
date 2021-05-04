@@ -95,13 +95,13 @@ extension SetupProfileViewController {
 import SwiftUI
 //for working with canvas
 struct SetupProfileVCProvider: PreviewProvider {
-    static var previews: some View{
+    static var previews: some View {
         Group {
             ContainerView().edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         }
     }
     
-    struct ContainerView: UIViewControllerRepresentable{
+    struct ContainerView: UIViewControllerRepresentable {
         
         let viewController = SetupProfileViewController()
         

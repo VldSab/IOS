@@ -23,6 +23,7 @@
 		4F86173E263FE3140032E16A /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86173D263FE3140032E16A /* SetupProfileViewController.swift */; };
 		4F861740263FE8520032E16A /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86173F263FE8520032E16A /* AddPhotoView.swift */; };
 		4F86174226404EEB0032E16A /* SegmentedControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86174126404EEB0032E16A /* SegmentedControl+Extensions.swift */; };
+		4F8B4A9A2641CF7E0068FB10 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8B4A992641CF7E0068FB10 /* ListViewController.swift */; };
 		4FDFA46A263EEC8E00B7B627 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDFA469263EEC8E00B7B627 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		4F86173D263FE3140032E16A /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		4F86173F263FE8520032E16A /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		4F86174126404EEB0032E16A /* SegmentedControl+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControl+Extensions.swift"; sourceTree = "<group>"; };
+		4F8B4A992641CF7E0068FB10 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		4FDFA469263EEC8E00B7B627 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 				4F8384E9263D379100891FCD /* SignUpViewController.swift */,
 				4FDFA469263EEC8E00B7B627 /* LoginViewController.swift */,
 				4F86173D263FE3140032E16A /* SetupProfileViewController.swift */,
+				4F8B4A992641CF7E0068FB10 /* ListViewController.swift */,
 				4F816EAC263C0E48009EE2EE /* Extensions */,
 				4F01501B2635F15700738E77 /* Assets.xcassets */,
 				4F01501D2635F15700738E77 /* LaunchScreen.storyboard */,
@@ -199,6 +202,7 @@
 				4F816EA8263BEB89009EE2EE /* UILabel+Extension.swift in Sources */,
 				4F816EA6263BE149009EE2EE /* UIColor+Extension.swift in Sources */,
 				4F59FDCF263B26B500E0A076 /* UIFont+Extension.swift in Sources */,
+				4F8B4A9A2641CF7E0068FB10 /* ListViewController.swift in Sources */,
 				4F0150152635F15500738E77 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
