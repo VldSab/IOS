@@ -24,6 +24,8 @@
 		4F861740263FE8520032E16A /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86173F263FE8520032E16A /* AddPhotoView.swift */; };
 		4F86174226404EEB0032E16A /* SegmentedControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86174126404EEB0032E16A /* SegmentedControl+Extensions.swift */; };
 		4F8B4A9A2641CF7E0068FB10 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8B4A992641CF7E0068FB10 /* ListViewController.swift */; };
+		4F95B8352642B139001FB809 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95B8342642B139001FB809 /* MainTabBarController.swift */; };
+		4F95B8372642B244001FB809 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95B8362642B244001FB809 /* PeopleViewController.swift */; };
 		4FDFA46A263EEC8E00B7B627 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDFA469263EEC8E00B7B627 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		4F86173F263FE8520032E16A /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		4F86174126404EEB0032E16A /* SegmentedControl+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControl+Extensions.swift"; sourceTree = "<group>"; };
 		4F8B4A992641CF7E0068FB10 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		4F95B8342642B139001FB809 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		4F95B8362642B244001FB809 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		4FDFA469263EEC8E00B7B627 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,11 +86,8 @@
 			children = (
 				4F0150122635F15500738E77 /* AppDelegate.swift */,
 				4F0150142635F15500738E77 /* SceneDelegate.swift */,
-				4F0150162635F15500738E77 /* AuthViewController.swift */,
-				4F8384E9263D379100891FCD /* SignUpViewController.swift */,
-				4FDFA469263EEC8E00B7B627 /* LoginViewController.swift */,
-				4F86173D263FE3140032E16A /* SetupProfileViewController.swift */,
-				4F8B4A992641CF7E0068FB10 /* ListViewController.swift */,
+				4F95B8332642B118001FB809 /* Controllers */,
+				4F95B8322642B094001FB809 /* SignIn&Authtorization */,
 				4F816EAC263C0E48009EE2EE /* Extensions */,
 				4F01501B2635F15700738E77 /* Assets.xcassets */,
 				4F01501D2635F15700738E77 /* LaunchScreen.storyboard */,
@@ -117,6 +118,27 @@
 				4F816EAB263C0E2D009EE2EE /* UIKit */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4F95B8322642B094001FB809 /* SignIn&Authtorization */ = {
+			isa = PBXGroup;
+			children = (
+				4F0150162635F15500738E77 /* AuthViewController.swift */,
+				4F8384E9263D379100891FCD /* SignUpViewController.swift */,
+				4FDFA469263EEC8E00B7B627 /* LoginViewController.swift */,
+				4F86173D263FE3140032E16A /* SetupProfileViewController.swift */,
+			);
+			path = "SignIn&Authtorization";
+			sourceTree = "<group>";
+		};
+		4F95B8332642B118001FB809 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4F95B8342642B139001FB809 /* MainTabBarController.swift */,
+				4F8B4A992641CF7E0068FB10 /* ListViewController.swift */,
+				4F95B8362642B244001FB809 /* PeopleViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +215,9 @@
 				4F59FDCB263B217300E0A076 /* UIButton+Extension.swift in Sources */,
 				4F816EAA263C09D3009EE2EE /* UIImageView+Extension.swift in Sources */,
 				4F816EAE263C214D009EE2EE /* ButtonFormView.swift in Sources */,
+				4F95B8372642B244001FB809 /* PeopleViewController.swift in Sources */,
 				4F8384EA263D379100891FCD /* SignUpViewController.swift in Sources */,
+				4F95B8352642B139001FB809 /* MainTabBarController.swift in Sources */,
 				4F0150132635F15500738E77 /* AppDelegate.swift in Sources */,
 				4F8384EC263D3D0400891FCD /* OneLineTextField.swift in Sources */,
 				4F86174226404EEB0032E16A /* SegmentedControl+Extensions.swift in Sources */,

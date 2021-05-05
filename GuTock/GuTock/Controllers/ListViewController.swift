@@ -13,13 +13,16 @@ class ListViewController: UIViewController{
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        setupSearchBar()
         setupCollectionView()
+       
     }
     
+    // implementation of collectionView
     private func setupCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .mainWhite()
         view.addSubview(collectionView)
         
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellid")
@@ -27,8 +30,20 @@ class ListViewController: UIViewController{
         collectionView.delegate = self
         collectionView.dataSource = self
     }
+    
+    private func setupSearchBar() {
+        navigationController?.navigationBar.barTintColor = .mainWhite()
+        navigationController?.navigationBar.shadowImage = UIImage()
+        let searchController = UISearchController(searchResultsController: nil)
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = false
+        
+    }
 }
 
+//making items
 extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
@@ -41,7 +56,6 @@ extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
     }
     
-    
 }
 
 //MARK:- SwiftUI
@@ -49,16 +63,14 @@ import SwiftUI
 //for working with canvas
 struct ListVCProvider: PreviewProvider {
     static var previews: some View{
-        Group {
             ContainerView().edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-        }
     }
     
     struct ContainerView: UIViewControllerRepresentable {
         
-        let viewController = ListViewController()
+        let viewController = MainTabBarController()
         
-        func makeUIViewController(context: Context) -> ListViewController {
+        func makeUIViewController(context: Context) -> MainTabBarController {
             return viewController
         }
         
