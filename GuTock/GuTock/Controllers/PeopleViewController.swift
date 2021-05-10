@@ -12,6 +12,8 @@ class PeopleViewConteroller: UIViewController {
         super.viewDidLoad()
         setupSearchBar() 
     }
+    
+    //create search bar
     private func setupSearchBar() {
         navigationController?.navigationBar.barTintColor = .mainWhite()
         navigationController?.navigationBar.shadowImage = UIImage()
