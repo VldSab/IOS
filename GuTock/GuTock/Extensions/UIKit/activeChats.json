@@ -1,0 +1,27 @@
+[
+    {
+        "username": "Elon",
+        "userImage": "Elon",
+        "lastMessage": "Rocket science, maaan",
+        "id": 1
+    },
+    {
+        "username": "Richard",
+        "userImage": "Richard",
+        "lastMessage": "Pied Pepper is new Internet!!! Really!",
+        "id": 2
+    },
+    {
+        "username": "Mishanya",
+        "userImage": "Mishanya",
+        "lastMessage": "Life is so hard sometimes, but sometimes too. I think she is my wife...",
+        "id": 3
+    },
+    {
+        "username": "Brazov",
+        "userImage": "Elon",
+        "lastMessage": "I must do smth great",
+        "id": 4
+    }
+]
+

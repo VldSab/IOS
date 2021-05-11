@@ -27,8 +27,6 @@ class PeopleViewConteroller: UIViewController {
 }
 
 
-
-
 //MARK:- SwiftUI
 import SwiftUI
 //for working with canvas

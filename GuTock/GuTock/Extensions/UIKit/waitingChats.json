@@ -1,0 +1,14 @@
+[
+    {
+        "username": "Tony",
+        "userImage": "Tony",
+        "lastMessage": "Thats all, goodby",
+        "id": 5
+    },
+    {
+        "username": "Steve",
+        "userImage": "Steve",
+        "lastMessage": "Money dosnt matter, live your life",
+        "id": 6
+    }
+]
