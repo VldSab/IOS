@@ -8,6 +8,8 @@
 import UIKit
 
 class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
+    
+    
     static var reuseId: String = "ActiveChatCell"
     
     let friendImageView = UIImageView()
@@ -21,6 +23,16 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
         lastMessage.text = value.lastMessage
     }
     
+    func configure<U>(with value: U) where U : Hashable {
+        guard let chat: MChat = value as? MChat else {
+            fatalError("Value \(value) is not MChat type")
+        }
+        friendImageView.image = UIImage(named: chat.userImage)
+        friendName.text = chat.username
+        lastMessage.text = chat.lastMessage
+    }
+    
+   
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupConstraints()

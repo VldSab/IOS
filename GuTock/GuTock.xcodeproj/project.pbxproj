@@ -18,6 +18,8 @@
 		4F0B798F264D833D006F9FCF /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0B798E264D833D006F9FCF /* MChat.swift */; };
 		4F59FDCB263B217300E0A076 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FDCA263B217300E0A076 /* UIButton+Extension.swift */; };
 		4F59FDCF263B26B500E0A076 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FDCE263B26B500E0A076 /* UIFont+Extension.swift */; };
+		4F64C8C1264EB9A6002D6372 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64C8C0264EB9A6002D6372 /* UserCell.swift */; };
+		4F64C8C3264EBEF4002D6372 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64C8C2264EBEF4002D6372 /* UIViewController+Extensions.swift */; };
 		4F816EA6263BE149009EE2EE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F816EA5263BE149009EE2EE /* UIColor+Extension.swift */; };
 		4F816EA8263BEB89009EE2EE /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F816EA7263BEB89009EE2EE /* UILabel+Extension.swift */; };
 		4F816EAA263C09D3009EE2EE /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F816EA9263C09D3009EE2EE /* UIImageView+Extension.swift */; };
@@ -54,6 +56,8 @@
 		4F0B798E264D833D006F9FCF /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
 		4F59FDCA263B217300E0A076 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		4F59FDCE263B26B500E0A076 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		4F64C8C0264EB9A6002D6372 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		4F64C8C2264EBEF4002D6372 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		4F816EA5263BE149009EE2EE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		4F816EA7263BEB89009EE2EE /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		4F816EA9263C09D3009EE2EE /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 				4F59FDCA263B217300E0A076 /* UIButton+Extension.swift */,
 				4F59FDCE263B26B500E0A076 /* UIFont+Extension.swift */,
 				4F816EA7263BEB89009EE2EE /* UILabel+Extension.swift */,
+				4F64C8C2264EBEF4002D6372 /* UIViewController+Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			children = (
 				4F83849F264BC0DA00BF0543 /* ActiveChatCell.swift */,
 				4FC9BD78264C5209006CECBF /* WaitingChatCell.swift */,
+				4F64C8C0264EB9A6002D6372 /* UserCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -283,6 +289,7 @@
 				4F59FDCB263B217300E0A076 /* UIButton+Extension.swift in Sources */,
 				4F8384A0264BC0DA00BF0543 /* ActiveChatCell.swift in Sources */,
 				4F816EAA263C09D3009EE2EE /* UIImageView+Extension.swift in Sources */,
+				4F64C8C1264EB9A6002D6372 /* UserCell.swift in Sources */,
 				4F816EAE263C214D009EE2EE /* ButtonFormView.swift in Sources */,
 				4F95B8372642B244001FB809 /* PeopleViewController.swift in Sources */,
 				4F8384EA263D379100891FCD /* SignUpViewController.swift in Sources */,
@@ -301,6 +308,7 @@
 				4F59FDCF263B26B500E0A076 /* UIFont+Extension.swift in Sources */,
 				4F0B7988264D1435006F9FCF /* SectionHeader.swift in Sources */,
 				4F8B4A9A2641CF7E0068FB10 /* ListViewController.swift in Sources */,
+				4F64C8C3264EBEF4002D6372 /* UIViewController+Extensions.swift in Sources */,
 				4F0B798F264D833D006F9FCF /* MChat.swift in Sources */,
 				4F0150152635F15500738E77 /* SceneDelegate.swift in Sources */,
 				4F872DCA264AD3C90079605E /* Bundle-Decodable.swift in Sources */,
