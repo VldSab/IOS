@@ -25,14 +25,14 @@ class PeopleViewController: UIViewController {
     }
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchBar()
         setupCollectionView()
         createDataSource()
-        reloadData()
+        reloadData(with: nil)
     }
+    
     
     // implementation of collectionView
     private func setupCollectionView() {
@@ -47,6 +47,7 @@ class PeopleViewController: UIViewController {
         collectionView.register(UserCell.self, forCellWithReuseIdentifier: UserCell.reuseId)
     }
     
+    
     //create search bar
     private func setupSearchBar() {
         navigationController?.navigationBar.barTintColor = .mainWhite()
@@ -56,18 +57,25 @@ class PeopleViewController: UIViewController {
         navigationItem.hidesSearchBarWhenScrolling = false
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
         
     }
     
     
     //filling with new data
-    private func reloadData() {
+    private func reloadData(with searchText: String?) {
+        
+        let filtered = users.filter { user in
+            user.contains(text: searchText)
+        }
+        
         var snapshot = NSDiffableDataSourceSnapshot<Section, MUser>()
         snapshot.appendSections([.users])
-        snapshot.appendItems(users, toSection: .users)
+        snapshot.appendItems(filtered, toSection: .users)
         dataSource?.apply(snapshot, animatingDifferences: true)
     }
 }
+
 
 //MARK:- Setup Layout
 extension PeopleViewController {
@@ -92,6 +100,7 @@ extension PeopleViewController {
         return layout
     }
     
+    
     private func createUsersSection() -> NSCollectionLayoutSection {
         
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
@@ -111,6 +120,7 @@ extension PeopleViewController {
         return section
         
     }
+    
     
     private func createSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
         let sectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1))
@@ -133,6 +143,7 @@ extension PeopleViewController {
             }
         })
         
+        
         dataSource?.supplementaryViewProvider = {
             collectionView, kind, indexPath in
             guard let sectionHeader =  collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.reuseId, for: indexPath) as? SectionHeader else {
@@ -148,6 +159,15 @@ extension PeopleViewController {
         }
     }
 }
+
+
+//MARK:- UISearchBarDelegate
+extension PeopleViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        reloadData(with: searchText)
+    }
+}
+
 
 //MARK:- SwiftUI
 import SwiftUI

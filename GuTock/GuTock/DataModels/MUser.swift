@@ -17,6 +17,18 @@ struct MUser: Hashable, Decodable {
         hasher.combine(id)
     }
     
+    func contains(text: String?) -> Bool {
+        guard let filter = text else {
+            return true
+        }
+        if filter.isEmpty {
+            return true
+        }
+        let lowercasedFilter = filter.lowercased()
+        let isContains = username.lowercased().contains(lowercasedFilter)
+        return isContains
+    }
+    
     static func == (lhs: MUser, rhs: MUser) -> Bool {
         return lhs.id == rhs.id
     }
