@@ -10,5 +10,11 @@
         "userImage": "Steve",
         "lastMessage": "Money dosnt matter, live your life",
         "id": 6
+    },
+    {
+        "username": "July",
+        "userImage": "July",
+        "lastMessage": "Money dosnt matter, live your life",
+        "id": 4
     }
 ]

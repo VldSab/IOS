@@ -9,8 +9,79 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    let containerView = UIView()
+    let imageView = UIImageView(image: #imageLiteral(resourceName: "July"), contentMode: .scaleAspectFill)
+    let nameLabel = UILabel(text: "July", font: .laoSangamMN26())
+    let aboutMeLabel = UILabel(text: "I love the genius Vladimir, he is the best", font: .laoSangamMN20())
+    var myTextField = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
+        setupConstraints()
+    }
+    
+    
+}
+
+extension ProfileViewController {
+    
+    private func setupConstraints() {
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.backgroundColor = .mainWhite()
+        containerView.layer.cornerRadius = 30
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        aboutMeLabel.translatesAutoresizingMaskIntoConstraints = false
+        aboutMeLabel.numberOfLines = 0
+        myTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(imageView)
+        view.addSubview(containerView)
+        containerView.addSubview(nameLabel)
+        containerView.addSubview(aboutMeLabel)
+        containerView.addSubview(myTextField)
+        
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: view.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30)
+            
+        ])
+        
+        NSLayoutConstraint.activate([
+            containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            containerView.heightAnchor.constraint(equalToConstant: 206)
+            
+        ])
+        
+        NSLayoutConstraint.activate([
+            nameLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 30),
+            nameLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 30),
+            nameLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -30),
+        ])
+        
+        NSLayoutConstraint.activate([
+            aboutMeLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
+            aboutMeLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 30),
+            aboutMeLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -30),
+        ])
+        
+        myTextField.text = "Write me"
+        myTextField.textColor = .systemGray
+        myTextField.borderStyle = .roundedRect
+        
+        NSLayoutConstraint.activate([
+            myTextField.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -60),
+            myTextField.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 30),
+            myTextField.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -30),
+            myTextField.heightAnchor.constraint(equalToConstant: 40)
+        ])
+        
     }
 }
 
