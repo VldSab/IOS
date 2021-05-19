@@ -37,6 +37,9 @@
 		4F93923C264FC97400F53CBB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F93923B264FC97400F53CBB /* ProfileViewController.swift */; };
 		4F95B8352642B139001FB809 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95B8342642B139001FB809 /* MainTabBarController.swift */; };
 		4F95B8372642B244001FB809 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95B8362642B244001FB809 /* PeopleViewController.swift */; };
+		4FA356B9265570D900516377 /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA356B8265570D900516377 /* InsertableTextField.swift */; };
+		4FA356BB26557C6E00516377 /* UIVIew+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA356BA26557C6E00516377 /* UIVIew+Extensions.swift */; };
+		4FA356BD265590A200516377 /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA356BC265590A200516377 /* ChatRequestViewController.swift */; };
 		4FC9BD77264C31EB006CECBF /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC9BD76264C31EB006CECBF /* GradientView.swift */; };
 		4FC9BD79264C5209006CECBF /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC9BD78264C5209006CECBF /* WaitingChatCell.swift */; };
 		4FC9BD7B264C5604006CECBF /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC9BD7A264C5604006CECBF /* SelfConfiguringCell.swift */; };
@@ -76,6 +79,9 @@
 		4F93923B264FC97400F53CBB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4F95B8342642B139001FB809 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4F95B8362642B244001FB809 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		4FA356B8265570D900516377 /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
+		4FA356BA26557C6E00516377 /* UIVIew+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extensions.swift"; sourceTree = "<group>"; };
+		4FA356BC265590A200516377 /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
 		4FC9BD76264C31EB006CECBF /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		4FC9BD78264C5209006CECBF /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
 		4FC9BD7A264C5604006CECBF /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				4F86174126404EEB0032E16A /* SegmentedControl+Extensions.swift */,
+				4FA356BA26557C6E00516377 /* UIVIew+Extensions.swift */,
 				4F816EA9263C09D3009EE2EE /* UIImageView+Extension.swift */,
 				4F816EA5263BE149009EE2EE /* UIColor+Extension.swift */,
 				4F59FDCA263B217300E0A076 /* UIButton+Extension.swift */,
@@ -164,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				4F86173F263FE8520032E16A /* AddPhotoView.swift */,
+				4FA356B8265570D900516377 /* InsertableTextField.swift */,
 				4F816EAD263C214D009EE2EE /* ButtonFormView.swift */,
 				4F8384EB263D3D0400891FCD /* OneLineTextField.swift */,
 				4FC9BD76264C31EB006CECBF /* GradientView.swift */,
@@ -201,6 +209,7 @@
 				4F8B4A992641CF7E0068FB10 /* ListViewController.swift */,
 				4F95B8362642B244001FB809 /* PeopleViewController.swift */,
 				4F93923B264FC97400F53CBB /* ProfileViewController.swift */,
+				4FA356BC265590A200516377 /* ChatRequestViewController.swift */,
 				4F83849E264BC09600BF0543 /* Cell */,
 				4F0B7989264D8175006F9FCF /* Header */,
 			);
@@ -289,8 +298,10 @@
 			files = (
 				4FDFA46A263EEC8E00B7B627 /* LoginViewController.swift in Sources */,
 				4F0150172635F15500738E77 /* AuthViewController.swift in Sources */,
+				4FA356BD265590A200516377 /* ChatRequestViewController.swift in Sources */,
 				4F59FDCB263B217300E0A076 /* UIButton+Extension.swift in Sources */,
 				4F8384A0264BC0DA00BF0543 /* ActiveChatCell.swift in Sources */,
+				4FA356B9265570D900516377 /* InsertableTextField.swift in Sources */,
 				4F816EAA263C09D3009EE2EE /* UIImageView+Extension.swift in Sources */,
 				4F64C8C1264EB9A6002D6372 /* UserCell.swift in Sources */,
 				4F816EAE263C214D009EE2EE /* ButtonFormView.swift in Sources */,
@@ -303,6 +314,7 @@
 				4F93923C264FC97400F53CBB /* ProfileViewController.swift in Sources */,
 				4FC9BD7B264C5604006CECBF /* SelfConfiguringCell.swift in Sources */,
 				4FC9BD77264C31EB006CECBF /* GradientView.swift in Sources */,
+				4FA356BB26557C6E00516377 /* UIVIew+Extensions.swift in Sources */,
 				4F86174226404EEB0032E16A /* SegmentedControl+Extensions.swift in Sources */,
 				4F86173E263FE3140032E16A /* SetupProfileViewController.swift in Sources */,
 				4F861740263FE8520032E16A /* AddPhotoView.swift in Sources */,

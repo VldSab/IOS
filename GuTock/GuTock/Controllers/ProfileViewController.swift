@@ -13,15 +13,26 @@ class ProfileViewController: UIViewController {
     let imageView = UIImageView(image: #imageLiteral(resourceName: "July"), contentMode: .scaleAspectFill)
     let nameLabel = UILabel(text: "July", font: .laoSangamMN26())
     let aboutMeLabel = UILabel(text: "I love the genius Vladimir, he is the best", font: .laoSangamMN20())
-    var myTextField = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+    var myTextField = InsertableTextField()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupConstraints()
+        customizeElements()
     }
     
+    //its not customization, and I will fix it later
+    private func customizeElements(){
+        if let button = myTextField.rightView as? UIButton {
+            button.addTarget(self, action: #selector(sendMessage), for: .touchUpInside)
+        }
+    }
+    
+    @objc private func sendMessage() {
+        print(#function)
+    }
     
 }
 
@@ -42,6 +53,8 @@ extension ProfileViewController {
         containerView.addSubview(nameLabel)
         containerView.addSubview(aboutMeLabel)
         containerView.addSubview(myTextField)
+        
+        
         
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -70,11 +83,7 @@ extension ProfileViewController {
             aboutMeLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 30),
             aboutMeLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -30),
         ])
-        
-        myTextField.text = "Write me"
-        myTextField.textColor = .systemGray
-        myTextField.borderStyle = .roundedRect
-        
+                
         NSLayoutConstraint.activate([
             myTextField.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -60),
             myTextField.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 30),
