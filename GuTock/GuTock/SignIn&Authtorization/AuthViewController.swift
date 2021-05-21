@@ -19,6 +19,10 @@ class AuthViewController: UIViewController {
     let emailLabel = UILabel(text: "Or sign up with")
     let alreadyOnboardLabel = UILabel(text: "Already onboard?")
     
+    //controllers
+    let signUpVC = SignUpViewController()
+    let loginVC = LoginViewController()
+    
     //app logo
     let logoImageView = UIImageView(image: #imageLiteral(resourceName: "logo1.0"), contentMode: .scaleAspectFit)
         
@@ -27,6 +31,20 @@ class AuthViewController: UIViewController {
         view.backgroundColor = .white
         setupConstraints()
         
+        //events click button
+        emailButton.addTarget(self, action: #selector(emailButtonTapped), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+
+    }
+    
+    @objc private func emailButtonTapped() {
+        print(#function)
+        present(signUpVC, animated: true, completion: nil)
+    }
+    
+    @objc private func loginButtonTapped() {
+        print(#function)
+        present(loginVC, animated: true, completion: nil)
     }
 }
 
