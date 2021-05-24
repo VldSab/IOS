@@ -48,9 +48,8 @@ class SignUpViewController: UIViewController {
             case .success(let user):
                 self.showAlert(with: "Fine", and: "You are on the borad")
                 print(user.email)
-            case .failure(let lable):
-                self.showAlert(with: "Oh", and: "Something went wrong")
-                print(lable)
+            case .failure(let error):
+                self.showAlert(with: "Oh", and: error.localizedDescription)
             }
         }
     }
