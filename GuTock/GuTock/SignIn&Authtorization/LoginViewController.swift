@@ -29,6 +29,8 @@ class LoginViewController: UIViewController {
         return signButton
     }()
     
+    weak var delegate: AuthNavigatingDelegate?
+    
     //text fields
     let emailTextField = OneLineTextField(font: .avenir20())
     let passwordTextField = OneLineTextField(font: .avenir20())
@@ -40,6 +42,7 @@ class LoginViewController: UIViewController {
         
         //events click button
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
     }
     
     @objc private func loginButtonTapped() {
@@ -47,11 +50,17 @@ class LoginViewController: UIViewController {
         AuthService.shared.login(email: emailTextField.text, password: passwordTextField.text) { result in
             switch result{
             
-            case .success(let user):
+            case .success(_):
                 self.showAlert(with: "Welcome back", and: "")
             case .failure(let error):
                 self.showAlert(with: "Error", and: error.localizedDescription)
             }
+        }
+    }
+    
+    @objc private func signUpButtonTapped() {
+        dismiss(animated: true) {
+            self.delegate?.toSignUpVC()
         }
     }
     

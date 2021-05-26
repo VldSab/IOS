@@ -47,6 +47,7 @@
 		4FC9BD77264C31EB006CECBF /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC9BD76264C31EB006CECBF /* GradientView.swift */; };
 		4FC9BD79264C5209006CECBF /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC9BD78264C5209006CECBF /* WaitingChatCell.swift */; };
 		4FC9BD7B264C5604006CECBF /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC9BD7A264C5604006CECBF /* SelfConfiguringCell.swift */; };
+		4FD3B8B2265EC51000DE23FB /* AuthNavigatingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD3B8B1265EC51000DE23FB /* AuthNavigatingDelegate.swift */; };
 		4FDFA46A263EEC8E00B7B627 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDFA469263EEC8E00B7B627 /* LoginViewController.swift */; };
 		9D7AAA02B1FD24EF8E02ECC8 /* Pods_GuTock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D22055F8E1B400934DE7D6CF /* Pods_GuTock.framework */; };
 /* End PBXBuildFile section */
@@ -95,6 +96,7 @@
 		4FC9BD76264C31EB006CECBF /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		4FC9BD78264C5209006CECBF /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
 		4FC9BD7A264C5604006CECBF /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
+		4FD3B8B1265EC51000DE23FB /* AuthNavigatingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigatingDelegate.swift; sourceTree = "<group>"; };
 		4FDFA469263EEC8E00B7B627 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6AF83AED8998ADEBB4151C4E /* Pods-GuTock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuTock.release.xcconfig"; path = "Target Support Files/Pods-GuTock/Pods-GuTock.release.xcconfig"; sourceTree = "<group>"; };
 		D22055F8E1B400934DE7D6CF /* Pods_GuTock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuTock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				4FC9BD7A264C5604006CECBF /* SelfConfiguringCell.swift */,
+				4FD3B8B1265EC51000DE23FB /* AuthNavigatingDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				4FA356B9265570D900516377 /* InsertableTextField.swift in Sources */,
 				4F816EAA263C09D3009EE2EE /* UIImageView+Extension.swift in Sources */,
 				4F64C8C1264EB9A6002D6372 /* UserCell.swift in Sources */,
+				4FD3B8B2265EC51000DE23FB /* AuthNavigatingDelegate.swift in Sources */,
 				4F816EAE263C214D009EE2EE /* ButtonFormView.swift in Sources */,
 				4F95B8372642B244001FB809 /* PeopleViewController.swift in Sources */,
 				4F8384EA263D379100891FCD /* SignUpViewController.swift in Sources */,
