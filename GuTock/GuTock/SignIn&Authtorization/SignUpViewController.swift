@@ -48,9 +48,9 @@ class SignUpViewController: UIViewController {
         print(#function)
         AuthService.shared.register(email: emailTextField.text, password: passwordTextField.text, confirmPassword: confirmPasswordTextField.text) { result in
             switch result{
-            case .success(_):
+            case .success(let user):
                 self.showAlert(with: "Fine", and: "You are on the board") {
-                    self.present(SetupProfileViewController(), animated: true, completion: nil)
+                    self.present(SetupProfileViewController(currentUser: user), animated: true, completion: nil)
                 }
             case .failure(let error):
                 self.showAlert(with: "Oh", and: error.localizedDescription)
@@ -153,16 +153,4 @@ struct SignUpVCProvider: PreviewProvider {
 }
 
 
-extension UIViewController {
-    
-    func showAlert(with title: String, and message: String, completion: @escaping () -> Void = {}) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default) { (_) in
-            completion()
-        }
-      
-        alertController.addAction(okAction)
-        present(alertController, animated: true, completion: nil)
-    }
-    
-}
+
