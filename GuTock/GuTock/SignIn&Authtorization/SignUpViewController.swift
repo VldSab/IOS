@@ -44,6 +44,7 @@ class SignUpViewController: UIViewController {
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
+    //if signIn button taped
     @objc private func signUpButtonTapped() {
         print(#function)
         AuthService.shared.register(email: emailTextField.text, password: passwordTextField.text, confirmPassword: confirmPasswordTextField.text) { result in
@@ -58,6 +59,7 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    //if login button tapped close current screen and open loginViewController
     @objc private func loginButtonTapped() {
         self.dismiss(animated: true) {
             self.delegate?.toLoginVC()

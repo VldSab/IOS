@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import FirebaseFirestore
 //data steructure for active chats
 struct MUser: Hashable, Decodable {
     var username: String
@@ -15,6 +15,34 @@ struct MUser: Hashable, Decodable {
     var sex: String
     var avatarStringURL: String
     var id: String 
+    
+    init(username: String, email: String, description: String, sex: String, avatarStringURL: String, id: String) {
+        self.username = username
+        self.id = id
+        self.email = email
+        self.description = description
+        self.sex = sex
+        self.avatarStringURL = avatarStringURL
+    }
+    
+    init?(document: DocumentSnapshot) {
+        guard let data = document.data() else {
+            return nil
+        }
+        guard let username = data["username"] as? String else {return nil}
+        guard let id = data["uid"] as? String else {return nil}
+        guard let email = data["email"] as? String else {return nil}
+        guard let description = data["description"] as? String else {return nil}
+        guard let sex = data["sex"] as? String else {return nil}
+        guard let avatarStringURL = data["avatarStringURL"] as? String else {return nil}
+        
+        self.username = username
+        self.id = id
+        self.email = email
+        self.description = description
+        self.sex = sex
+        self.avatarStringURL = avatarStringURL
+    }
     
     var representation: [String : Any] {
         var rep: Dictionary<String, Any> = [:]

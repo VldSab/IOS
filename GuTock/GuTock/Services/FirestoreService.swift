@@ -26,7 +26,7 @@ class FirestoreService {
         }
         
         let mUser = MUser(username: username!, email: email, description: description!, sex: sex!, avatarStringURL: "not exist", id: id)
-        
+    
         self.usersRef.document(mUser.id).setData(mUser.representation) { error in
             if let error = error {
                 completion(.failure(error))
@@ -35,5 +35,21 @@ class FirestoreService {
             }
         }
         
+    }
+    
+    func getUserData(user: User, completion: @escaping (Result<MUser,Error>) -> Void) {
+        let docRef = usersRef.document(user.uid)
+        docRef.getDocument { document, error in
+            if let document = document, document.exists {
+                guard let mUser = MUser(document: document) else {
+                    completion(.failure(UserError.cannotUnwwrapToMUser))
+                    return
+                }
+                completion(.success(mUser))
+            } else {
+                print("No info")
+                completion(.failure(UserError.cannotGetUserInfo))
+            }
+        }
     }
 }

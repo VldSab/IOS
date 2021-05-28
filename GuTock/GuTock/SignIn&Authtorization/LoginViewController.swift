@@ -45,19 +45,30 @@ class LoginViewController: UIViewController {
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
     }
     
+    //if login button tapped
     @objc private func loginButtonTapped() {
         print(#function)
-        AuthService.shared.login(email: emailTextField.text, password: passwordTextField.text) { result in
+        AuthService.shared.login(email: emailTextField.text!, password: passwordTextField.text!) { result in
             switch result{
-            
-            case .success(_):
-                self.showAlert(with: "Welcome back", and: "")
+            case .success(let user):
+                self.showAlert(with: "Welcome back", and: "") {
+                    FirestoreService.shared.getUserData(user: user) { (result) in
+                        switch result {
+                        case .success(let muser):
+                            self.present(MainTabBarController(), animated: true, completion: nil)
+                        case .failure(_):
+                            self.present(SetupProfileViewController(currentUser: user), animated: true, completion: nil)
+                        }
+                    }
+                }
             case .failure(let error):
                 self.showAlert(with: "Error", and: error.localizedDescription)
             }
         }
     }
-    
+
+
+    //if signUp button tapped close current screen and open signUpViewController
     @objc private func signUpButtonTapped() {
         dismiss(animated: true) {
             self.delegate?.toSignUpVC()
