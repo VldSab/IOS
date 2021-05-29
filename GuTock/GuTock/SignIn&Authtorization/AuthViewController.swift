@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class AuthViewController: UIViewController {
     
@@ -34,9 +35,11 @@ class AuthViewController: UIViewController {
         //events click button
         emailButton.addTarget(self, action: #selector(emailButtonTapped), for: .touchUpInside)
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        googleButton.addTarget(self, action: #selector(googleButtonTapped), for: .touchUpInside)
 
         signUpVC.delegate = self
         loginVC.delegate = self
+        GIDSignIn.sharedInstance()?.delegate = self
         
     }
     
@@ -48,6 +51,13 @@ class AuthViewController: UIViewController {
     @objc private func loginButtonTapped() {
         print(#function)
         present(loginVC, animated: true, completion: nil)
+    }
+    
+    //autorization with google
+    @objc private func googleButtonTapped() {
+        print(#function)
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance().signIn()
     }
 }
 
@@ -95,6 +105,31 @@ extension AuthViewController: AuthNavigatingDelegate {
     }
     
     
+}
+
+extension AuthViewController: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        AuthService.shared.googleLogin(user: user, error: error) { result in
+            switch result {
+            
+            case .success(let user):
+                FirestoreService.shared.getUserData(user: user) { result in
+                    switch result {
+                        
+                    case .success(let mUser):
+                        
+                        let mainTabBarController = MainTabBarController(currentUser: mUser)
+                        mainTabBarController.modalPresentationStyle = .fullScreen
+                        UIApplication.getTopViewController()?.present(mainTabBarController, animated: true, completion: nil)
+                    case .failure(_):
+                        UIApplication.getTopViewController()?.present(SetupProfileViewController(currentUser: user), animated: true, completion: nil)
+                    }
+                }
+            case .failure(let error):
+                self.showAlert(with: "Error", and: error.localizedDescription)
+            }
+        }
+    }
 }
 
 //MARK: - SwiftUI

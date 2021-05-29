@@ -20,6 +20,9 @@
 		4F59FDCF263B26B500E0A076 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59FDCE263B26B500E0A076 /* UIFont+Extension.swift */; };
 		4F64C8C1264EB9A6002D6372 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64C8C0264EB9A6002D6372 /* UserCell.swift */; };
 		4F64C8C3264EBEF4002D6372 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64C8C2264EBEF4002D6372 /* UIViewController+Extensions.swift */; };
+		4F6D28DE26623C2000ECEA14 /* UIAplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6D28DD26623C2000ECEA14 /* UIAplication+Extension.swift */; };
+		4F6D28E026624CC300ECEA14 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6D28DF26624CC300ECEA14 /* StorageService.swift */; };
+		4F6D28E2266256CB00ECEA14 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6D28E1266256CB00ECEA14 /* UIImage+Extension.swift */; };
 		4F816EA6263BE149009EE2EE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F816EA5263BE149009EE2EE /* UIColor+Extension.swift */; };
 		4F816EA8263BEB89009EE2EE /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F816EA7263BEB89009EE2EE /* UILabel+Extension.swift */; };
 		4F816EAA263C09D3009EE2EE /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F816EA9263C09D3009EE2EE /* UIImageView+Extension.swift */; };
@@ -71,6 +74,9 @@
 		4F59FDCE263B26B500E0A076 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		4F64C8C0264EB9A6002D6372 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		4F64C8C2264EBEF4002D6372 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		4F6D28DD26623C2000ECEA14 /* UIAplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAplication+Extension.swift"; sourceTree = "<group>"; };
+		4F6D28DF26624CC300ECEA14 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		4F6D28E1266256CB00ECEA14 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		4F816EA5263BE149009EE2EE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		4F816EA7263BEB89009EE2EE /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		4F816EA9263C09D3009EE2EE /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
@@ -179,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				4F86174126404EEB0032E16A /* SegmentedControl+Extensions.swift */,
+				4F6D28E1266256CB00ECEA14 /* UIImage+Extension.swift */,
+				4F6D28DD26623C2000ECEA14 /* UIAplication+Extension.swift */,
 				4FA356BA26557C6E00516377 /* UIVIew+Extensions.swift */,
 				4F816EA9263C09D3009EE2EE /* UIImageView+Extension.swift */,
 				4F816EA5263BE149009EE2EE /* UIColor+Extension.swift */,
@@ -209,6 +217,7 @@
 			children = (
 				4F825C952657EB7B00EB2DA4 /* AuthService.swift */,
 				4F87367E265FB71D004C74BC /* FirestoreService.swift */,
+				4F6D28DF26624CC300ECEA14 /* StorageService.swift */,
 				4F0B7990264D83CC006F9FCF /* DataModels */,
 			);
 			path = Services;
@@ -297,6 +306,7 @@
 				4F01500C2635F15500738E77 /* Frameworks */,
 				4F01500D2635F15500738E77 /* Resources */,
 				3247DFC45036832454F38E73 /* [CP] Embed Pods Frameworks */,
+				DBA0FB892B146A9D424A1799 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -395,6 +405,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DBA0FB892B146A9D424A1799 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GuTock/Pods-GuTock-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GuTock/Pods-GuTock-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GuTock/Pods-GuTock-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -405,7 +432,9 @@
 				4FDFA46A263EEC8E00B7B627 /* LoginViewController.swift in Sources */,
 				4F87367F265FB71D004C74BC /* FirestoreService.swift in Sources */,
 				4F0150172635F15500738E77 /* AuthViewController.swift in Sources */,
+				4F6D28DE26623C2000ECEA14 /* UIAplication+Extension.swift in Sources */,
 				4F873681265FC1F4004C74BC /* UserError.swift in Sources */,
+				4F6D28E026624CC300ECEA14 /* StorageService.swift in Sources */,
 				4FA356BD265590A200516377 /* ChatRequestViewController.swift in Sources */,
 				4F59FDCB263B217300E0A076 /* UIButton+Extension.swift in Sources */,
 				4F8384A0264BC0DA00BF0543 /* ActiveChatCell.swift in Sources */,
@@ -429,6 +458,7 @@
 				4F861740263FE8520032E16A /* AddPhotoView.swift in Sources */,
 				4FC9BD79264C5209006CECBF /* WaitingChatCell.swift in Sources */,
 				4F816EA8263BEB89009EE2EE /* UILabel+Extension.swift in Sources */,
+				4F6D28E2266256CB00ECEA14 /* UIImage+Extension.swift in Sources */,
 				4F816EA6263BE149009EE2EE /* UIColor+Extension.swift in Sources */,
 				4F59FDCF263B26B500E0A076 /* UIFont+Extension.swift in Sources */,
 				4FC1AD55265BB77A00838159 /* Validators.swift in Sources */,
@@ -582,6 +612,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y333NGDV67;
 				INFOPLIST_FILE = GuTock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -602,6 +633,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y333NGDV67;
 				INFOPLIST_FILE = GuTock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

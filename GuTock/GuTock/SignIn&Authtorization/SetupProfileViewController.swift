@@ -33,6 +33,12 @@ class SetupProfileViewController: UIViewController {
     init(currentUser: User) {
         self.currentUser = currentUser
         super.init(nibName: nil, bundle: nil)
+        
+        if let username = currentUser.displayName {
+            nameTextField.text = username
+        }
+        
+        //TODO Set google image
     }
     
     required init?(coder: NSCoder) {
@@ -43,24 +49,41 @@ class SetupProfileViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupConstraints()
+        setupHeader()
         letToChatsButton.addTarget(self, action: #selector(letToChatsButtonTapped), for: .touchUpInside)
+        addPhotoView.plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func plusButtonTapped() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .photoLibrary
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    //create search controller
+    private func setupHeader() {
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.shadowImage = UIImage()        
     }
     
     @objc private func letToChatsButtonTapped() {
         FirestoreService.shared.saveProfileWith(id: currentUser.uid,
                                                 email: currentUser.email!,
                                                 username: nameTextField.text,
-                                                avatarImageString: "nil",
+                                                avatarImage: addPhotoView.circleImageView.image,
                                                 description: aboutMeTextField.text,
                                                 sex: sexSegmentedController.titleForSegment(at: sexSegmentedController.selectedSegmentIndex)) { result in
             switch result {
             
             case .success(let muser):
                 self.showAlert(with: "Success", and: "Go to chats") {
-                    self.present(MainTabBarController(), animated: true, completion: nil)
+                    let mainTabBarController = MainTabBarController(currentUser: muser)
+                    mainTabBarController.modalPresentationStyle = .fullScreen
+                    self.present(mainTabBarController, animated: true, completion: nil)
                 }
             case .failure(let error):
-                self.showAlert(with: "Error", and: error.localizedDescription)
+                self.showAlert(with: "Oh", and: error.localizedDescription)
             }
         }
     }
@@ -120,6 +143,17 @@ extension SetupProfileViewController {
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
+    }
+}
+
+//MARK:- UIImagePickerControllerDelegate, UINavigationControllerDelegate
+extension SetupProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+            return
+        }
+        addPhotoView.circleImageView.image = image
     }
 }
 
