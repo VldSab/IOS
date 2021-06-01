@@ -27,9 +27,9 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
         guard let chat: MChat = value as? MChat else {
             fatalError("Value \(value) is not MChat type")
         }
-//        friendImageView.image = UIImage(named: chat.userImage)
-//        friendName.text = chat.username
-//        lastMessage.text = chat.lastMessage
+        friendImageView.sd_setImage(with: URL(string: chat.friendAvatarstringURL), completed: nil)
+        friendName.text = chat.friendUsername
+        lastMessage.text = chat.lastMessageContent
     }
     
    
