@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import SDWebImage
 
 class SetupProfileViewController: UIViewController {
     
@@ -37,7 +38,9 @@ class SetupProfileViewController: UIViewController {
         if let username = currentUser.displayName {
             nameTextField.text = username
         }
-        
+        if let photoURL = currentUser.photoURL {
+            addPhotoView.circleImageView.sd_setImage(with: photoURL, completed: nil)
+        }
         //TODO Set google image
     }
     
@@ -129,7 +132,7 @@ extension SetupProfileViewController {
         addPhotoView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
+            welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 130),
             welcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         

@@ -129,14 +129,14 @@ extension LoginViewController {
         
         //ancors and activation
         NSLayoutConstraint.activate([
-            welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
+            welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 110),
             welcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            stackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 80),
+            stackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 70),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
             
-            bottomStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40),
+            bottomStackView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 20),
             bottomStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         

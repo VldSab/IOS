@@ -18,18 +18,18 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
     let gradientView = GradientView(from: .topTrailing, to: .bottomLeading, startColor: #colorLiteral(red: 0.7882352941, green: 0.631372549, blue: 0.9411764706, alpha: 1), endColor: #colorLiteral(red: 0.4784313725, green: 0.6980392157, blue: 0.9215686275, alpha: 1))
     
     func configure(with value: MChat) {
-        friendImageView.image = UIImage(named: value.userImage)
-        friendName.text = value.username
-        lastMessage.text = value.lastMessage
+//        friendImageView.image = UIImage(named: value.userImage)
+//        friendName.text = value.username
+//        lastMessage.text = value.lastMessage
     }
     
     func configure<U>(with value: U) where U : Hashable {
         guard let chat: MChat = value as? MChat else {
             fatalError("Value \(value) is not MChat type")
         }
-        friendImageView.image = UIImage(named: chat.userImage)
-        friendName.text = chat.username
-        lastMessage.text = chat.lastMessage
+//        friendImageView.image = UIImage(named: chat.userImage)
+//        friendName.text = chat.username
+//        lastMessage.text = chat.lastMessage
     }
     
    

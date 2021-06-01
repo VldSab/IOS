@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProfileViewController: UIViewController {
     
@@ -15,6 +16,18 @@ class ProfileViewController: UIViewController {
     let aboutMeLabel = UILabel(text: "I love the genius Vladimir, he is the best", font: .laoSangamMN20())
     var myTextField = InsertableTextField()
     
+    private let user: MUser
+    init(user: MUser) {
+        self.user = user
+        self.nameLabel.text = user.username
+        self.aboutMeLabel.text = user.description
+        self.imageView.sd_setImage(with: URL(string: user.avatarStringURL), completed: nil)
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +45,21 @@ class ProfileViewController: UIViewController {
     
     @objc private func sendMessage() {
         print(#function)
+        guard let message = myTextField.text , message != "" else {
+            return
+        }
+        self.dismiss(animated: true) {
+            FirestoreService.shared.createWaitingChat(message: message, reciever: self.user) { result in
+                switch result {
+                
+                case .success():
+                    UIApplication.getTopViewController()?.showAlert(with: "Success", and: "Your message has been sent")
+                case .failure(let error):
+                    UIApplication.getTopViewController()?.showAlert(with: "Error", and: error.localizedDescription)
+                }
+            }
+            
+        }
     }
     
 }
@@ -95,24 +123,4 @@ extension ProfileViewController {
 }
 
 
-//MARK:- SwiftUI
-import SwiftUI
-//for working with canvas
-struct ProfileVCProvider: PreviewProvider {
-    static var previews: some View{
-            ContainerView().edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        
-        let viewController = ProfileViewController()
-        
-        func makeUIViewController(context: Context) -> ProfileViewController {
-            return viewController
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        }
-    }
-    
-}
+

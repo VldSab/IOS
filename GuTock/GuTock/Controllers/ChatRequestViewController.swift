@@ -16,11 +16,39 @@ class ChatRequestViewController: UIViewController {
     let buttonAccept = UIButton(title: "ACCEPT", titleColor: .white, backgroundColor: .systemBlue, isShadow: true, cornerRadius: 10)
     let buttonDeny = UIButton(title: "Deny", titleColor: .mainWhite(), backgroundColor: .mainWhite(), isShadow: true, cornerRadius: 10)
    
+    weak var delegate: WaitingChatsNavigation?
+    
+    private var chat : MChat
+    init(chat: MChat) {
+        self.chat = chat
+        nameLabel.text = chat.friendUsername
+        imageView.sd_setImage(with: URL(string: chat.friendAvatarstringURL), completed: nil)
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupConstraints()
         if let text = nameLabel.text {
             descriptionLabel.text = "\(text) wants to chat with you!"
+        }
+        buttonDeny.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
+        buttonAccept.addTarget(self, action: #selector(acceptButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func addButtonTapped() {
+        self.dismiss(animated: true) {
+            self.delegate?.removeWaitingChat(chat: self.chat)
+        }
+    }
+    
+    @objc private func acceptButtonTapped() {
+        self.dismiss(animated: true) {
+            self.delegate?.changeToActive(chat: self.chat)
         }
     }
     
@@ -102,24 +130,4 @@ extension ChatRequestViewController {
     
 }
 
-//MARK:- SwiftUI
-import SwiftUI
-//for working with canvas
-struct ChatRequestVCProvider: PreviewProvider {
-    static var previews: some View{
-            ContainerView().edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        
-        let viewController = ChatRequestViewController()
-        
-        func makeUIViewController(context: Context) -> ChatRequestViewController {
-            return viewController
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        }
-    }
-    
-}
+

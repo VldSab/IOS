@@ -13,6 +13,12 @@ class FirestoreService {
     static let shared = FirestoreService()
     let db = Firestore.firestore()
     
+    var currentUser : MUser!
+    
+    private var waitingChatsRef: CollectionReference {
+        return db.collection(["users", currentUser.id, "waitingChats"].joined(separator: "/"))
+    }
+    
     private var usersRef: CollectionReference {
         return db.collection("users")
     }
@@ -48,10 +54,8 @@ class FirestoreService {
                 completion(.failure(error))
             }
         }
-        
-        
-        
     }
+    
     
     func getUserData(user: User, completion: @escaping (Result<MUser,Error>) -> Void) {
         let docRef = usersRef.document(user.uid)
@@ -61,11 +65,88 @@ class FirestoreService {
                     completion(.failure(UserError.cannotUnwwrapToMUser))
                     return
                 }
+                self.currentUser = mUser
                 completion(.success(mUser))
             } else {
                 print("No info")
                 completion(.failure(UserError.cannotGetUserInfo))
             }
+        }
+    }
+    
+    func createWaitingChat(message: String, reciever: MUser, completion: @escaping (Result<Void,Error>) -> Void)  {
+        let reference = db.collection(["users", reciever.id, "waitingChats"].joined(separator: "/"))
+        let messageRef = reference.document(self.currentUser.id).collection("messages")
+        
+        let message = MMessage(user: currentUser, content: message)
+        let chat =  MChat(friendUsername: currentUser.username,
+                          friendAvatarstringURL: currentUser.avatarStringURL,
+                          lastMessageContent: message.content,
+                          friendID: currentUser.id)
+        
+        reference.document(currentUser.id).setData(chat.representation) { error in
+            if let error = error {
+                completion(.failure(error))
+            }
+            messageRef.addDocument(data: message.represenation) { error in
+                if let error = error {
+                    completion(.failure(error))
+                    return
+                }
+                completion(.success(Void()))
+            }
+        }
+    }
+    
+    func deleteWaitingChat(chat: MChat,  completion: @escaping (Result<Void,Error>) -> Void) {
+        waitingChatsRef.document(chat.friendID).delete { error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            self.deleteMessages(chat: chat, completion: completion)
+        }
+    }
+    
+    func deleteMessages(chat: MChat, completion: @escaping (Result<Void, Error>) -> Void) {
+        let reference = waitingChatsRef.document(chat.friendID).collection("messages")
+        getWaitingChatMessages(chat: chat) { result in
+            switch result {
+            
+            case .success(let messages):
+                for message in messages {
+                    guard let documentID = message.id else {
+                        return
+                    }
+                    let messageRef = reference.document(documentID)
+                    messageRef.delete { error in
+                        if let error = error {
+                            completion(.failure(error))
+                            return
+                        }
+                        completion(.success(Void()))
+                    }
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func getWaitingChatMessages(chat: MChat, completion: @escaping (Result<[MMessage], Error>) -> Void) {
+        let reference = waitingChatsRef.document(chat.friendID).collection("messages")
+        var messages = [MMessage]()
+        reference.getDocuments { querySnapshot, error in
+            if let error = error {
+                completion(.failure(error))
+            }
+            for document in querySnapshot!.documents {
+                guard let message = MMessage(document: document) else {
+                    return
+                }
+                messages.append(message)
+            }
+            completion(.success(messages))
         }
     }
 }

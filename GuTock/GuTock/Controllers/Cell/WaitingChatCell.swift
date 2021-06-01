@@ -16,14 +16,15 @@ class WaitingChatCell: UICollectionViewCell, SelfConfiguringCell {
     let friendImageView = UIImageView()
     
     func configure(with value: MChat) {
-        friendImageView.image = UIImage(named: value.userImage)
+       // friendImageView.image = UIImage(named: value.userImage)
     }
     
     func configure<U>(with value: U) where U : Hashable {
         guard let chat: MChat = value as? MChat else {
             fatalError("Value \(value) is not MChat type")
         }
-        friendImageView.image = UIImage(named: chat.userImage)
+        friendImageView.sd_setImage(with: URL(string: chat.friendAvatarstringURL), completed: nil)
+        //friendImageView.image = UIImage(named: chat.userImage)
     }
     
     override init(frame: CGRect) {

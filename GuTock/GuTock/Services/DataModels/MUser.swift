@@ -44,6 +44,23 @@ struct MUser: Hashable, Decodable {
         self.avatarStringURL = avatarStringURL
     }
     
+    init?(document: QueryDocumentSnapshot) {
+        let data = document.data()
+        guard let username = data["username"] as? String else {return nil}
+        guard let id = data["uid"] as? String else {return nil}
+        guard let email = data["email"] as? String else {return nil}
+        guard let description = data["description"] as? String else {return nil}
+        guard let sex = data["sex"] as? String else {return nil}
+        guard let avatarStringURL = data["avatarStringURL"] as? String else {return nil}
+        
+        self.username = username
+        self.id = id
+        self.email = email
+        self.description = description
+        self.sex = sex
+        self.avatarStringURL = avatarStringURL
+    }
+    
     var representation: [String : Any] {
         var rep: Dictionary<String, Any> = [:]
         rep["username"] = username
