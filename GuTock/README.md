@@ -37,3 +37,14 @@
   <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/Chats.png" width="260"/>
   <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/SetupProfile.png" width="260"/>
 </p>
+
+## Request to chat/ Deny:
+<p float="left">
+  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/Request.png" width="260"/>
+  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/AcceptDeny.png" width="260"/>
+</p>
+
+## Chat:
+<p float="left">
+  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/Conversation.PNG" width="260"/> 
+</p>
