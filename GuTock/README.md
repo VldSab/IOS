@@ -23,6 +23,7 @@
 4. Requests to chat;
 5. Waiting and active chats;
 
+
 ## Autorization/Login:
 <p float="left">
   <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/FirstScreen.png" width="230"/>
@@ -31,6 +32,7 @@
   <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/Login.png" width="230"/>
 </p>
 
+
 ## Tab bar screens:
 <p float="left">
   <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/SearchPeople.png" width="260"/>
@@ -38,13 +40,17 @@
   <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/SetupProfile.png" width="260"/>
 </p>
 
+
 ## Request to chat/ Deny:
 <p float="left">
   <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/Request.png" width="260"/>
   <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/AcceptDeny.png" width="260"/>
 </p>
 
+
 ## Chat:
 <p float="left">
   <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/Conversation.PNG" width="260"/> 
 </p>
+
+Futher, I'm going to make photo/video and voice messages.
