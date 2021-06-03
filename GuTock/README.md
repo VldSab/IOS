@@ -33,7 +33,7 @@
 
 ## Tab bar screens:
 <p float="left">
-  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/SearchPeople.png.png" width="260"/>
+  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/SearchPeople.png" width="260"/>
   <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/Chats.png" width="260"/>
   <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/SetupProfile.png" width="260"/>
 </p>
