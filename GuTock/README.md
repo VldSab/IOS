@@ -24,5 +24,5 @@
 5. Waiting and active chats;
 
 ## Autorization/Login:
-<img src="https://user-images.githubusercontent.com/link-to-your-image.png" width="200" />
+<img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/FirstScreen.png" width="200"/>
 
