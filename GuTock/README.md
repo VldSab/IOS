@@ -7,6 +7,7 @@
 3. CompositionalLayout;
 4. DiffableDatasource;
 5. MessageKit;
+6. Gradients.
 
 ### Database:
 1. Firebase (email and google authentication);
@@ -21,4 +22,7 @@
 3. Senging messages;
 4. Requests to chat;
 5. Waiting and active chats;
+
+##Autorization/Login:
+
 
