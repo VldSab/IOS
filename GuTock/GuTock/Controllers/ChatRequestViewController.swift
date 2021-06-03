@@ -38,6 +38,7 @@ class ChatRequestViewController: UIViewController {
         }
         buttonDeny.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
         buttonAccept.addTarget(self, action: #selector(acceptButtonTapped), for: .touchUpInside)
+        self.hideKeyboardWhenTappedAround()
     }
     
     @objc private func addButtonTapped() {

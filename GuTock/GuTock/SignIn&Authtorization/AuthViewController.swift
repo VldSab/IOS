@@ -40,7 +40,7 @@ class AuthViewController: UIViewController {
         signUpVC.delegate = self
         loginVC.delegate = self
         GIDSignIn.sharedInstance()?.delegate = self
-        
+        self.hideKeyboardWhenTappedAround()
     }
     
     @objc private func emailButtonTapped() {

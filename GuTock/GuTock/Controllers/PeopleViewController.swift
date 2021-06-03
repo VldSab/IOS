@@ -47,7 +47,7 @@ class PeopleViewController: UIViewController {
         setupSearchBar()
         setupCollectionView()
         createDataSource()
-        
+        self.hideKeyboardWhenTappedAround()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(signOut))
         usersListener = ListenerService.shared.usersObserve(users: users, completion: { result in
             switch result {

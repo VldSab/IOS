@@ -55,6 +55,7 @@ class SetupProfileViewController: UIViewController {
         setupHeader()
         letToChatsButton.addTarget(self, action: #selector(letToChatsButtonTapped), for: .touchUpInside)
         addPhotoView.plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
+        self.hideKeyboardWhenTappedAround()
     }
     
     @objc private func plusButtonTapped() {

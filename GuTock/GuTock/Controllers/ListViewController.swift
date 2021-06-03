@@ -52,6 +52,7 @@ class ListViewController: UIViewController{
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         setupSearchBar()
         setupCollectionView()
         createDataSource()

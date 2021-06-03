@@ -42,6 +42,7 @@ class SignUpViewController: UIViewController {
         //events click button
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        self.hideKeyboardWhenTappedAround()
     }
     
     //if signIn button taped

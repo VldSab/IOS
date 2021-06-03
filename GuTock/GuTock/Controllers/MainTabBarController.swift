@@ -22,8 +22,7 @@ class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //controllers to tabBar
+        self.hideKeyboardWhenTappedAround()         //controllers to tabBar
         let listViewController = ListViewController(currentUser: currentUser)
         let peopleViewController = PeopleViewController(currentUser: currentUser)
         let setupProfileController = SetupProfileViewController(currentUser: Auth.auth().currentUser!)

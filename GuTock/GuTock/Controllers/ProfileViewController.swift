@@ -34,6 +34,7 @@ class ProfileViewController: UIViewController {
         view.backgroundColor = .white
         setupConstraints()
         customizeElements()
+        self.hideKeyboardWhenTappedAround()
     }
     
     //its not customization, and I will fix it later
