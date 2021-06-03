@@ -25,8 +25,8 @@
 
 ## Autorization/Login:
 <p float="left">
-  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/FirstScreen.png" width="200"/>
-  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/Google.png" width="200"/>
-  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/SignUp.png" width="200"/>
-  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/Login.png" width="200"/>
+  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/FirstScreen.png" width="230"/>
+  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/Google.png" width="230"/>
+  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/SignUp.png" width="230"/>
+  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/Login.png" width="230"/>
 </p>
