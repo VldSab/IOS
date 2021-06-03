@@ -24,8 +24,9 @@
 5. Waiting and active chats;
 
 ## Autorization/Login:
-<img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/FirstScreen.png" width="300"/>
-<img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/Google.png" width="300"/>
-<img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/SignUp.png" width="300"/>
-<img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/Login.png" width="300"/>
-
+<p float="left">
+  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/FirstScreen.png" width="300"/>
+  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/Google.png" width="300"/>
+  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/SignUp.png" width="300"/>
+  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/Login.png" width="300"/>
+</p>
