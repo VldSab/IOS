@@ -2,7 +2,7 @@
 There are some of my pet projects for IOS:
 
 1. GuTock messenger; 
-2. To Do List;
+2. To Do List (TableEmogi and PhotoCollecton);
 3. Temperature Converter;
 4. Day Finder.
 
