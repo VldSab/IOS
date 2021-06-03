@@ -24,5 +24,5 @@
 5. Waiting and active chats;
 
 ## Autorization/Login:
-![]https://github.com/VldSab/IOS/blob/main/GuTock/Docs/FirstScreen.png
+![A]https://github.com/VldSab/IOS/blob/main/GuTock/Docs/FirstScreen.png
 
