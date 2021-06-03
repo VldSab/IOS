@@ -23,7 +23,7 @@
 4. Requests to chat;
 5. Waiting and active chats;
 
-<br>
+</br>
 ## Autorization/Login:
 <p float="left">
   <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/FirstScreen.png" width="230"/>
