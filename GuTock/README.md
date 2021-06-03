@@ -30,3 +30,10 @@
   <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/SignUp.png" width="230"/>
   <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/Login.png" width="230"/>
 </p>
+
+## Tab bar screens:
+<p float="left">
+  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/SearchPeople.png.png" width="260"/>
+  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/Chats.png" width="260"/>
+  <img src="https://github.com/VldSab/IOS/blob/main/GuTock/Docs/SetupProfile.png" width="260"/>
+</p>
