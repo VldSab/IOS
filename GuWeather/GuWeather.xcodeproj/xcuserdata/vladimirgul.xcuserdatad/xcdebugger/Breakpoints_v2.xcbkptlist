@@ -3,4 +3,102 @@
    uuid = "E39E9851-E4FC-43F0-AA30-752D39EB213C"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AFAFF38B-BBE4-4AB4-B5DB-697BE0CF8E0B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuWeather/Weather model/WeatherStruct.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "init(JSON:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4B181CC-8E0C-46A5-9963-4490EF778100"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuWeather/Weather managers/APIWeatherManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "fetchCurrentWeatherWith(city:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A4B181CC-8E0C-46A5-9963-4490EF778100 - 1f6a1e36611c96bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GuWeather.APIWeatherManager.fetchCurrentWeatherWith(city: Swift.String, completion: (Swift.Result&lt;GuWeather.WeatherStruct, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GuWeather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vladimirgul/Desktop/Swift/IOS/GuWeather/GuWeather/Weather%20managers/APIWeatherManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "220">
+               </Location>
+               <Location
+                  uuid = "A4B181CC-8E0C-46A5-9963-4490EF778100 - ed3c8f64b1fef66c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;) -&gt; Swift.Optional&lt;GuWeather.WeatherStruct&gt; in GuWeather.APIWeatherManager.fetchCurrentWeatherWith(city: Swift.String, completion: (Swift.Result&lt;GuWeather.WeatherStruct, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GuWeather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vladimirgul/Desktop/Swift/IOS/GuWeather/GuWeather/Weather%20managers/APIWeatherManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ADF57E3E-5213-4D62-903B-A5712DA9E98F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuWeather/Weather managers/APIWeatherManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "fetchCurrentWeatherWith(city:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1AA2E051-4324-48CD-915B-B11650365A8F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuWeather/Weather managers/APIManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

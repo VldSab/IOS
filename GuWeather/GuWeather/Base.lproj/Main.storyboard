@@ -27,7 +27,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dcL-F1-e7Y">
                                         <rect key="frame" x="82" y="84.000000000000014" width="250" height="240.33333333333337"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="749" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="Qo6-dc-rMN">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="749" image="Clear sky" translatesAutoresizingMaskIntoConstraints="NO" id="Qo6-dc-rMN">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="240.33333333333334"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" priority="999" constant="250" id="EeL-md-sgv">
@@ -115,6 +115,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sun" width="1073.3333740234375" height="1051.6666259765625"/>
+        <image name="Clear sky" width="1073.3333740234375" height="1051.6666259765625"/>
     </resources>
 </document>

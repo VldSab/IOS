@@ -31,7 +31,20 @@ extension WeatherStruct {
     }
     
     var pressureString: String {
-        return "\(Int(pressure)) mm"
+        //convert mb to mm Hg
+        return "\(Int(pressure * 0.75006)) mm"
     }
     
+}
+
+extension WeatherStruct: JSONDecodable {
+    init?(JSON: [String : AnyObject]) {
+        self.temperature = JSON["temp"] as? Double ?? 0
+        self.apparentTemperature = JSON["app_temp"] as? Double ?? 0
+        self.humidity = JSON["rh"] as? Double ?? 0
+        self.pressure = JSON["pres"] as? Double ?? 0
+        let weather = JSON["weather"] as? [String: Any] ?? ["weather": ["description": "Clear sky"]]
+        let iconString = weather["description"] as? String ?? "Clear sky"
+        self.icon = WeatherIconManager(rawValue: iconString).image
+    }
 }

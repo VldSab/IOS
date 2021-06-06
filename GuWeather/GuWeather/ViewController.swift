@@ -20,26 +20,19 @@ class ViewController: UIViewController {
     @IBAction func refreshButtonTapped(_ sender: Any) {
     }
     
+    lazy var weatherManager = APIWeatherManager(city: "Moscow")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let icon = WeatherIconManager.ClearSky.image
-        let currentWeather = WeatherStruct(temperature: 10, apparentTemperature: 5, humidity: 30, pressure: 720, icon: icon)
-        updateUIWith(currentWeather: currentWeather)
-        
-        let city = "Moscow"
-        let fullURL = URL(string: "https://api.weatherbit.io/v2.0/current?&key=d4e91b8894194baca15472a7427550c6&lang=ru&include=minutely&city=" + "\(city.lowercased())")
-        
-        let sessionConfiguration = URLSessionConfiguration.default
-        let session = URLSession(configuration: sessionConfiguration)
-        
-        let request = URLRequest(url: fullURL!)
-        let dataTask = session.dataTask(with: fullURL!) { data, response, error in
-            if data == data {
-                return
+        weatherManager.fetchCurrentWeatherWith(city: weatherManager.city) { result in
+            switch result {
+            case .success(let currentWeather):
+                self.updateUIWith(currentWeather: currentWeather)
+            case .failure(let error):
+                self.showAlert(with: "Error", and: error.localizedDescription)
             }
         }
-        dataTask.resume()
+    
     }
 
     func updateUIWith(currentWeather: WeatherStruct) {
