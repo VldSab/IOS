@@ -10,11 +10,15 @@ import UIKit
 class PhotoViewController: UIViewController {
     
     var image : UIImage?
+    var text: String?
     
     @IBOutlet weak var imagePhotoView: UIImageView!
+    @IBOutlet weak var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePhotoView.image = image
+        textView.text = text
         
     }
     

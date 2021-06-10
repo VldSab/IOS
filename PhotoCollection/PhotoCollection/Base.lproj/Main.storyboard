@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Noc-0X-YoK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Noc-0X-YoK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Photo Tapps-->
+        <!--Kinopoisk-->
         <scene sceneID="neW-wf-cjK">
             <objects>
                 <collectionViewController id="dr7-51-fQa" customClass="PhotosCollectionViewController" customModule="PhotoCollection" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,7 +55,7 @@
                             <outlet property="delegate" destination="dr7-51-fQa" id="brk-qS-8FR"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Photo Tapps" id="AML-Ln-O9f"/>
+                    <navigationItem key="navigationItem" title="Kinopoisk" id="AML-Ln-O9f"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cg8-wz-VHV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,12 +69,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="94u-xo-FXO">
-                                <rect key="frame" x="0.0" y="301.5" width="414" height="239"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="239" id="Gz9-L2-rfd"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogx-oQ-uQe">
                                 <rect key="frame" x="172" y="786" width="70" height="22"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
@@ -83,21 +77,40 @@
                                     <action selector="shareButton:" destination="ed5-qt-HEm" eventType="touchUpInside" id="J1e-wg-vvS"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PB0-iJ-WSB">
+                                <rect key="frame" x="0.0" y="639" width="414" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="94u-xo-FXO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="631"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="94u-xo-FXO" secondAttribute="height" multiplier="414:631" id="PJw-yZ-Czg"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qOf-3f-gLz"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="qOf-3f-gLz" firstAttribute="trailing" secondItem="94u-xo-FXO" secondAttribute="trailing" id="23W-4B-bzy"/>
-                            <constraint firstItem="94u-xo-FXO" firstAttribute="leading" secondItem="qOf-3f-gLz" secondAttribute="leading" id="EVI-vT-ZF2"/>
+                            <constraint firstItem="94u-xo-FXO" firstAttribute="trailing" secondItem="qOf-3f-gLz" secondAttribute="trailing" id="2eS-pA-EFX"/>
+                            <constraint firstItem="PB0-iJ-WSB" firstAttribute="top" secondItem="94u-xo-FXO" secondAttribute="bottom" constant="8" symbolic="YES" id="8Zb-ra-1Bj"/>
+                            <constraint firstItem="qOf-3f-gLz" firstAttribute="bottom" secondItem="PB0-iJ-WSB" secondAttribute="bottom" constant="41" id="CMO-1b-nlG"/>
+                            <constraint firstItem="94u-xo-FXO" firstAttribute="top" secondItem="qOf-3f-gLz" secondAttribute="top" id="CYT-cJ-dVg"/>
                             <constraint firstItem="qOf-3f-gLz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ogx-oQ-uQe" secondAttribute="trailing" constant="20" id="GcL-Wa-JPL"/>
                             <constraint firstItem="Ogx-oQ-uQe" firstAttribute="centerX" secondItem="qOf-3f-gLz" secondAttribute="centerX" id="KRk-3w-0Vi"/>
-                            <constraint firstItem="94u-xo-FXO" firstAttribute="centerY" secondItem="HIv-uD-xEU" secondAttribute="centerY" id="PyW-do-ukr"/>
+                            <constraint firstItem="94u-xo-FXO" firstAttribute="leading" secondItem="qOf-3f-gLz" secondAttribute="leading" id="LQm-EV-qd9"/>
                             <constraint firstItem="qOf-3f-gLz" firstAttribute="bottom" secondItem="Ogx-oQ-uQe" secondAttribute="bottom" id="gd8-TU-U3S"/>
                             <constraint firstItem="Ogx-oQ-uQe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qOf-3f-gLz" secondAttribute="leading" constant="20" id="lnQ-QV-XuL"/>
+                            <constraint firstItem="PB0-iJ-WSB" firstAttribute="trailing" secondItem="qOf-3f-gLz" secondAttribute="trailing" id="pH0-Mq-FwE"/>
+                            <constraint firstItem="PB0-iJ-WSB" firstAttribute="leading" secondItem="qOf-3f-gLz" secondAttribute="leading" id="sjC-BD-I8f"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imagePhotoView" destination="94u-xo-FXO" id="PTG-Qs-ic9"/>
+                        <outlet property="textView" destination="PB0-iJ-WSB" id="RVp-Kd-nKo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x7H-nW-fnE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

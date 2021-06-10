@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "PhotosCollectionViewController.getData(filmsNumber:):PhotosCollectionViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "struc">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "APIKinopoiskManager.fetchCurrentFilms(filmsNumber:completion:):APIKinopoiskManager.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
