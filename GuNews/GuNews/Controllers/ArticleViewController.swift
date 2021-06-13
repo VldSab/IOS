@@ -11,6 +11,10 @@ class ArticleViewController: UIViewController {
     
     var articleText: String?
     @IBOutlet weak var textView: UITextView!
+    @IBAction func shareButton(_ sender: Any) {
+        let shareController = UIActivityViewController(activityItems: [articleText!], applicationActivities: nil)
+        present(shareController, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

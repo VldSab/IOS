@@ -18,6 +18,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var sourceLabel: UILabel!
     var articleText: String?
     
+   
     override func layoutSubviews() {
        
         self.mainView.layer.cornerRadius = 10
