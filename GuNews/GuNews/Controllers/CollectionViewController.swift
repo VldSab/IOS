@@ -80,6 +80,7 @@ class CollectionViewController: UICollectionViewController {
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(allNews.count)
         return allNews.count
     }
     
