@@ -1,4 +1,4 @@
-##### Main screen, article and share:
+##### Main screen, and each item screen:
 
 <p float="left">
   <img src="https://github.com/VldSab/IOS/blob/main/TestTaskPryaniky/Photos/main.png" width="230"/>
