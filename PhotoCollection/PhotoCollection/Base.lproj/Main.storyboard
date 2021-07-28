@@ -37,10 +37,8 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="tdN-Vd-CQe" secondAttribute="bottom" id="6ld-o0-GkV"/>
-                                        <constraint firstItem="tdN-Vd-CQe" firstAttribute="centerY" secondItem="4ZB-X6-9AS" secondAttribute="centerY" id="7X2-be-SIO"/>
                                         <constraint firstItem="tdN-Vd-CQe" firstAttribute="leading" secondItem="4ZB-X6-9AS" secondAttribute="leading" id="Fj3-4d-F9E"/>
                                         <constraint firstAttribute="trailing" secondItem="tdN-Vd-CQe" secondAttribute="trailing" id="RQN-ri-tGe"/>
-                                        <constraint firstItem="tdN-Vd-CQe" firstAttribute="centerX" secondItem="4ZB-X6-9AS" secondAttribute="centerX" id="Vww-Zv-qM7"/>
                                         <constraint firstItem="tdN-Vd-CQe" firstAttribute="top" secondItem="4ZB-X6-9AS" secondAttribute="top" id="urh-Ks-p2E"/>
                                     </constraints>
                                 </collectionViewCellContentView>
@@ -80,7 +78,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PB0-iJ-WSB">
                                 <rect key="frame" x="0.0" y="639" width="414" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

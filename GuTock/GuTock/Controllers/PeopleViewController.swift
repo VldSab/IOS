@@ -2,7 +2,7 @@
 //  PeopleViewController.swift
 //  GuTock
 //
-//  Created by Владимир Гуль on 05.05.2021.
+//  Created by Владимир Саберуллин on 05.05.2021.
 //
 
 import UIKit

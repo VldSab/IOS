@@ -15,7 +15,7 @@ final class KinopoiskParser {
         self.request = URLRequest(url: urlTest)
     }
 
-    func getJSON(completion: @escaping (Result<Array<[String:Any]> , Error>) -> Void) {
+    func getJSON(completion: @escaping (Result<Array<[String:Any]>, Error>) -> Void) {
         request.httpMethod = "GET"
         let session = URLSession(configuration: .default)
         
